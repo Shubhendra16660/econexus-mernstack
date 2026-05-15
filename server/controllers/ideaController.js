@@ -64,6 +64,8 @@ const ideas = await Idea.find(filter)
     });
 
   } catch (error) {
+    console.log("ERROR:");
+    console.log(error);
     res.status(500).json({
       success: false,
       message: error.message,

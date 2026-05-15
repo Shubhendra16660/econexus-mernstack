@@ -57,7 +57,6 @@ console.log(formData);
 
     console.log(res.data);
     navigate("/dashboard/ideas");
-    alert("Idea submitted successfully 🚀");
 
   } catch (error) {
 
@@ -112,29 +111,7 @@ console.log(formData);
             <option value="Energy">Energy</option>
           </select>
 
-          <label>Problem Statement</label>
-
-          <textarea
-            name="problemStatement"
-            placeholder="What problem are you solving?"
-            onChange={handleChange}
-          />
-
-          <label>Solution</label>
-
-          <textarea
-            name="solution"
-            placeholder="How will you solve it?"
-            onChange={handleChange}
-          />
-
-          <label>Impact</label>
-
-          <textarea
-            name="impact"
-            placeholder="What impact will it create?"
-            onChange={handleChange}
-          />
+         
 
           <button className="submit-btn">
             Submit Idea

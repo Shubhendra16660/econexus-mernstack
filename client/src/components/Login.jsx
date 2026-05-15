@@ -21,7 +21,6 @@ function Login() {
 
     setError(""); 
   };
-
   // email regex
   const validateEmail = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);

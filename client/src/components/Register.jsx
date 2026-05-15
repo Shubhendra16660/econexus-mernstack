@@ -63,9 +63,6 @@ function Register() {
         "http://localhost:4000/api/auth/register",
         { name, email, password }
       );
-
-      alert("Account created successfully ✅");
-
       navigate("/login");
 
     } catch (err) {
