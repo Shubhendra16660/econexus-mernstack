@@ -46,7 +46,7 @@ console.log(formData);
     const token = localStorage.getItem("token");
 
     const res = await axios.post(
-      "http://localhost:4000/api/ideas",
+      `${import.meta.env.VITE_API_URL}/api/ideas`,
       formData,
       {
         headers: {

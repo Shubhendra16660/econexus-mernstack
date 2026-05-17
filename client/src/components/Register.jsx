@@ -58,14 +58,15 @@ function Register() {
       return setError("Passwords do not match ❌");
     }
 
-    try {
-      const res = await axios.post(
-        "http://localhost:4000/api/auth/register",
-        { name, email, password }
-      );
-      navigate("/login");
+   try {
+  const res = await axios.post(
+    `${import.meta.env.VITE_API_URL}/api/auth/register`,
+    { name, email, password }
+  );
 
-    } catch (err) {
+  navigate("/login");
+
+}catch (err) {
       setError(err.response?.data?.message || "Registration failed ❌");
     }
   };

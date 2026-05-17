@@ -12,7 +12,7 @@ function Ideas() {
   const fetchIdeas = async () => {
     try {
       const res = await axios.get(
-        "http://localhost:4000/api/ideas",
+        `${import.meta.env.VITE_API_URL}/api/ideas`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -37,7 +37,7 @@ function Ideas() {
   const handleReview = async (id, status) => {
     try {
       await axios.put(
-        `http://localhost:4000/api/ideas/${id}/review`,
+        `${import.meta.env.VITE_API_URL}/api/ideas/${id}/review`,
         {
           status,
           feedback: `${status} by admin`,

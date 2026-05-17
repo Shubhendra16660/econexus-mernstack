@@ -57,9 +57,9 @@ function Login() {
       try {
 
     const res = await axios.post(
-      "http://localhost:4000/api/auth/login",
-      formData
-    );
+  `${import.meta.env.VITE_API_URL}/api/auth/login`,
+  formData
+);
   // save token
     localStorage.setItem(
       "token",
